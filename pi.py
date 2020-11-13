@@ -29,6 +29,11 @@ while True:
 	print(slide)
 	if 10<distance<15:
 		pygame.mixer.music.play()
+	if 0<slide<20:
 		delay = 2
+	elif 20<slide<500:
+		delay = .5
+	else:
+		delay = 1
 	time.sleep(delay)
 	
