@@ -82,12 +82,18 @@ while True:
 	#else:
 		#time.sleep(.4)
 	#else:
-	pygame.mixer.music.load(queue)
 	pygame.mixer.music.play()
+	while True:
+		if pygame.mixer.music.get_busy():
+			pass
+		else:
+			pygame.mixer.music.load(queue)
+			#pygame.mixer.music.play()
+			break
 		#pygame.mixer.music.play()
 	#while pygame.mixer.music.get_busy() == True:
 		#pass
 	#pygame.mixer.music.stop()
-	time.sleep(.1)
+	time.sleep(.2)
 
 	
