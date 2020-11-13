@@ -101,7 +101,7 @@ while True:
 		pygame.mixer.music.stop()
 		#time.sleep(delay)
 	#else:
-		#time.sleep(delay)
+	time.sleep(.5)
 
 	if 0<slide<20:
 		delay = 1
