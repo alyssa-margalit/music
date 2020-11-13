@@ -36,23 +36,23 @@ while True:
 	if 0<distance<5:
 		pygame.mixer.music.load("bass.mp3")
 		pygame.mixer.music.play()
-		time.sleep(1)
+		time.sleep(delay)
 	elif 5<distance<10:
 		pygame.mixer.music.load("drum_stick.mp3")
 		pygame.mixer.music.play()
-		time.sleep(1)
+		time.sleep(delay)
 	elif 10<distance<15:
 		pygame.mixer.music.load("meow.mp3")
 		pygame.mixer.music.play()
-		time.sleep(1)
+		time.sleep(delay)
 	else:
 		time.sleep(delay)
 
 	if 0<slide<20:
 		delay = 2
 	elif 20<slide<500:
-		delay = .5
+		delay = 4
 	else:
-		delay = 1
+		delay = .2
 	
 	
