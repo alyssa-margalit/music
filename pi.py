@@ -5,6 +5,9 @@ from grovepi import *
 import math
 import pygame
 from pygame.locals import *
+import os
+
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 pygame.init()
 
