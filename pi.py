@@ -40,7 +40,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		time.sleep(delay)
+		#time.sleep(delay)
 
 	elif 3<distance<6:
 		pygame.mixer.music.load("S2.mp3")
@@ -49,7 +49,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		time.sleep(delay)
+		#time.sleep(delay)
 	elif 6<distance<9:
 		pygame.mixer.music.load("S3.mp3")
 		pygame.mixer.music.play()
@@ -57,7 +57,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		time.sleep(delay)
+		#time.sleep(delay)
 	elif 9<distance<12:
 		pygame.mixer.music.load("S4.mp3")
 		pygame.mixer.music.play()
@@ -65,7 +65,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		time.sleep(delay)
+		#time.sleep(delay)
 	elif 12<distance<15:
 		pygame.mixer.music.load("S5.mp3")
 		pygame.mixer.music.play()
@@ -73,7 +73,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		time.sleep(delay)
+		#time.sleep(delay)
 	elif 12<distance<15:
 		pygame.mixer.music.load("S6.mp3")
 		pygame.mixer.music.play()
@@ -81,7 +81,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		time.sleep(delay)
+		#time.sleep(delay)
 	elif 15<distance<18:
 		pygame.mixer.music.load("S7.mp3")
 		pygame.mixer.music.play()
@@ -89,7 +89,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		time.sleep(delay)
+		#time.sleep(delay)
 	elif 18<distance<21:
 		pygame.mixer.music.load("S8.mp3")
 		pygame.mixer.music.play()
@@ -97,7 +97,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		time.sleep(delay)
+		#time.sleep(delay)
 	else:
 		time.sleep(delay)
 
