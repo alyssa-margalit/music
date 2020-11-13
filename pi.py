@@ -4,7 +4,7 @@ import grovepi
 from grovepi import *
 import math
 
-ranger = 3
+ranger = 4
 pot = 2
 delay = 1
 distance = ultrasonicRead(ranger)
