@@ -24,7 +24,7 @@ pygame.mixer.music.load("S1.mp3")
 queue = "S1.mp3"
 pygame.mixer.music.set_volume(15)
 
-
+global queue
 queue = "S1.mp3"
 
 def newBeat(distance):
@@ -70,10 +70,11 @@ while True:
 	pygame.mixer.music.play()
 	while True:
 		if pygame.mixer.music.get_busy():
-			print("busy")
+			#print("busy")
 			pass
 		else:
 			newBeat(distance)
+			print(queue)
 			pygame.mixer.music.load(queue)
 			break
 	if slide>500:
@@ -84,6 +85,6 @@ while True:
 	#while pygame.mixer.music.get_busy() == True:
 		#pass
 	#pygame.mixer.music.stop()
-	#time.sleep(.2)
+	time.sleep(.2)
 
 	
