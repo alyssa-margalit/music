@@ -19,10 +19,10 @@ pygame.mixer.init()
 pygame.mixer.music.load("bass.mp3")
 pygame.mixer.music.set_volume(1.5)
 pygame.mixer.music.play()
-#while pygame.mixer.music.get_busy() == True:
-	#pass
+while pygame.mixer.music.get_busy() == True:
+	pass
 while True:
-	pygame.mixer.music.play()
+	#pygame.mixer.music.play()
 	distance = ultrasonicRead(ranger)
 	print(distance)
 	slide = analogRead(pot)
