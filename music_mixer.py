@@ -1,5 +1,4 @@
-import pyglet
+from pygame import mixer
 
-audio = pyglet.media.media('bass-drum.mp3')
-audio.play()
-
+sound = mixer.Sound('bass-drum.mp3')
+sound.play()
