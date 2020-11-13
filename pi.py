@@ -4,6 +4,9 @@ import grovepi
 from grovepi import *
 import math
 import pygame
+from pygame.locals import *
+
+pygame.init()
 
 pygame.mixer.init()
 
