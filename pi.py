@@ -6,7 +6,7 @@ import math
 import pygame
 
 pygame.mixer.init()
-pygame.mixer.music.load("bass-drum.mp3")
+
 
 ranger = 4
 pot = 2
