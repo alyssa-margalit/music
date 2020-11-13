@@ -23,7 +23,7 @@ slide = analogRead(pot)
 print(slide)
 pygame.mixer.init()
 pygame.mixer.music.load("bass.mp3")
-pygame.mixer.music.set_volume(3)
+pygame.mixer.music.set_volume(10)
 #pygame.mixer.music.play()
 #while pygame.mixer.music.get_busy() == True:
 	#pass
@@ -35,6 +35,7 @@ while True:
 	print(slide)
 	if 10<distance<15:
 		pygame.mixer.music.play()
+		time.sleep(1)
 	if 0<slide<20:
 		delay = 2
 	elif 20<slide<500:
