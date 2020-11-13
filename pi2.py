@@ -24,7 +24,7 @@ pygame.mixer.music.load("S1.mp3")
 queue = "S1.mp3"
 pygame.mixer.music.set_volume(15)
 
-global queue 
+
 queue = "S1.mp3"
 
 def newBeat(distance):
