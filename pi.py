@@ -33,26 +33,62 @@ while True:
 	print(distance)
 	slide = analogRead(pot)
 	print(slide)
-	if 0<distance<5:
+	if 0<distance<3:
 		pygame.mixer.music.load("bass.mp3")
 		pygame.mixer.music.play()
 		time.sleep(delay)
-	elif 5<distance<10:
+	elif 3<distance<6:
+		pygame.mixer.music.load("Drum3.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 6<distance<9:
 		pygame.mixer.music.load("drum_stick.mp3")
 		pygame.mixer.music.play()
 		time.sleep(delay)
-	elif 10<distance<15:
+	elif 9<distance<12:
 		pygame.mixer.music.load("meow.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 12<distance<15:
+		pygame.mixer.music.load("Sfx1.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 12<distance<15:
+		pygame.mixer.music.load("Sfx2.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 15<distance<18:
+		pygame.mixer.music.load("Sfx3.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 18<distance<21:
+		pygame.mixer.music.load("Sfx5.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 21<distance<24:
+		pygame.mixer.music.load("Sfx6.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 24<distance<27:
+		pygame.mixer.music.load("Sfx7.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 27<distance<30:
+		pygame.mixer.music.load("Sfx8.mp3")
+		pygame.mixer.music.play()
+		time.sleep(delay)
+	elif 27<distance<30:
+		pygame.mixer.music.load("snare.mp3")
 		pygame.mixer.music.play()
 		time.sleep(delay)
 	else:
 		time.sleep(delay)
 
 	if 0<slide<20:
-		delay = 2
+		delay = 1
 	elif 20<slide<500:
-		delay = 4
+		delay = .7
 	else:
-		delay = .2
+		delay = .5
 	
 	
