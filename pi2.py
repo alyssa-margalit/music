@@ -18,16 +18,12 @@ ranger = 4
 pot = 2
 delay = 1
 distance = ultrasonicRead(ranger)
-#print(distance)
 slide = analogRead(pot)
-#print(slide)
 pygame.mixer.init()
 pygame.mixer.music.load("S1.mp3")
 queue = "S1.mp3"
 pygame.mixer.music.set_volume(15)
-#pygame.mixer.music.play()
-#while pygame.mixer.music.get_busy() == True:
-	#pass
+
 global queue 
 queue = "S1.mp3"
 
@@ -80,10 +76,14 @@ while True:
 			newBeat(distance)
 			pygame.mixer.music.load(queue)
 			break
+	if slide>500:
+		pygame.mixer.music.set_volume(30)
+	else:
+		pygame.mixer.music.set_volume(15)
 		#pygame.mixer.music.play()
 	#while pygame.mixer.music.get_busy() == True:
 		#pass
 	#pygame.mixer.music.stop()
-	time.sleep(.2)
+	#time.sleep(.2)
 
 	
