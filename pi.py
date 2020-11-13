@@ -33,15 +33,15 @@ while True:
 	print(distance)
 	slide = analogRead(pot)
 	print(slide)
-	if 10<distance<20:
+	if 0<distance<5:
 		pygame.mixer.music.load("bass.mp3")
 		pygame.mixer.music.play()
 		time.sleep(1)
-	elif 20<distance<30:
+	elif 5<distance<10:
 		pygame.mixer.music.load("drum_stick.mp3")
 		pygame.mixer.music.play()
 		time.sleep(1)
-	elif 30<distance<40:
+	elif 10<distance<15:
 		pygame.mixer.music.load("meow.mp3")
 		pygame.mixer.music.play()
 		time.sleep(1)
