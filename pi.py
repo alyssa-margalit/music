@@ -36,7 +36,12 @@ while True:
 	if 0<distance<3:
 		pygame.mixer.music.load("S1.mp3")
 		pygame.mixer.music.play()
+		#pygame.mixer.music.play()
+		while pygame.mixer.music.get_busy() == True:
+			pass
+		pygame.mixer.music.stop()
 		time.sleep(delay)
+
 	elif 3<distance<6:
 		pygame.mixer.music.load("S2.mp3")
 		pygame.mixer.music.play()
