@@ -22,12 +22,13 @@ pygame.mixer.music.play()
 while pygame.mixer.music.get_busy() == True:
 	pass
 while True:
-	#pygame.mixer.music.play()
+	
 	distance = ultrasonicRead(ranger)
 	print(distance)
 	slide = analogRead(pot)
 	print(slide)
 	if distance == 10:
+		pygame.mixer.music.play()
 		delay = 2
 	time.sleep(delay)
 	
