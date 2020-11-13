@@ -29,10 +29,12 @@ pygame.mixer.music.set_volume(15)
 	#pass
 while True:
 	
-	distance = ultrasonicRead(ranger)
+	distance1 = ultrasonicRead(ranger)
+	distance2 = ultrasonicRead(ranger)
+	distance = (distance1+distance2)/2
 	print(distance)
 	slide = analogRead(pot)
-	print(slide)
+	#print(slide)
 	if 0<distance<3:
 		pygame.mixer.music.load("S1.mp3")
 		pygame.mixer.music.play()
