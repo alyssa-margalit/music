@@ -6,7 +6,7 @@ import math
 import pygame
 from pygame.locals import *
 import os
-
+global queue
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 pygame.init()
@@ -24,7 +24,7 @@ pygame.mixer.music.load("S1.mp3")
 queue = "S1.mp3"
 pygame.mixer.music.set_volume(15)
 
-global queue
+
 queue = "S1.mp3"
 
 def newBeat(distance):
