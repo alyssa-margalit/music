@@ -1,6 +1,5 @@
 import pyglet
 
-music = pyglet.resource.media('bass-drum.mp3')
-music.play()
+audio = pyglet.media.media('bass-drum.mp3')
+audio.play()
 
-pyglet.app.run()
