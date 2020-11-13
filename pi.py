@@ -30,7 +30,7 @@ pygame.mixer.music.set_volume(15)
 while True:
 	
 	distance1 = ultrasonicRead(ranger)
-	time.sleep(.2)
+	time.sleep(.1)
 	distance2 = ultrasonicRead(ranger)
 	distance = (distance1+distance2)/2
 	#print(distance)
@@ -44,7 +44,7 @@ while True:
 			pass
 
 		pygame.mixer.music.stop()
-		pygame.mixer.music.unload("S1.mp3")
+		#pygame.mixer.music.unload("S1.mp3")
 		print("1")
 		#time.sleep(delay)
 
@@ -55,7 +55,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		pygame.mixer.music.unload("S2.mp3")
+		#pygame.mixer.music.unload("S2.mp3")
 		print("2")
 		#time.sleep(delay)
 	elif 6<distance<9:
@@ -65,7 +65,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		pygame.mixer.music.unload("S3.mp3")
+		#pygame.mixer.music.unload("S3.mp3")
 		print("3")
 		#time.sleep(delay)
 	elif 9<distance<12:
@@ -75,7 +75,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		pygame.mixer.music.unload("S4.mp3")
+		#pygame.mixer.music.unload("S4.mp3")
 		print("4")
 		#time.sleep(delay)
 	elif 12<distance<15:
@@ -85,7 +85,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		pygame.mixer.music.unload("S5.mp3")
+		#pygame.mixer.music.unload("S5.mp3")
 		print("5")
 		#time.sleep(delay)
 	elif 12<distance<15:
@@ -95,7 +95,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		pygame.mixer.music.unload("S7.mp3")
+		#pygame.mixer.music.unload("S7.mp3")
 		print("6")
 		#time.sleep(delay)
 	elif 15<distance<18:
@@ -105,7 +105,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		pygame.mixer.music.unload("S7.mp3")
+		#pygame.mixer.music.unload("S7.mp3")
 		print("7")
 		#time.sleep(delay)
 	elif 18<distance<21:
@@ -115,7 +115,7 @@ while True:
 		while pygame.mixer.music.get_busy() == True:
 			pass
 		pygame.mixer.music.stop()
-		pygame.mixer.music.unload("S8.mp3")
+		#pygame.mixer.music.unload("S8.mp3")
 		print("8")
 		#time.sleep(delay)
 	#else:
