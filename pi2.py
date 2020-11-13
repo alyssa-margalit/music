@@ -86,6 +86,6 @@ while True:
 	#while pygame.mixer.music.get_busy() == True:
 		#pass
 	#pygame.mixer.music.stop()
-	time.sleep(.1)
+	time.sleep(.4)
 
 	
