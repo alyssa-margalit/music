@@ -18,9 +18,9 @@ ranger = 4
 pot = 2
 delay = 1
 distance = ultrasonicRead(ranger)
-print(distance)
+#print(distance)
 slide = analogRead(pot)
-print(slide)
+#print(slide)
 pygame.mixer.init()
 #pygame.mixer.music.load("bass.mp3")
 pygame.mixer.music.set_volume(15)
@@ -32,7 +32,7 @@ while True:
 	distance1 = ultrasonicRead(ranger)
 	distance2 = ultrasonicRead(ranger)
 	distance = (distance1+distance2)/2
-	print(distance)
+	#print(distance)
 	slide = analogRead(pot)
 	#print(slide)
 	if 0<distance<3:
