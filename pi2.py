@@ -77,9 +77,9 @@ while True:
 	#else:
 	pygame.mixer.music.play()
 		#pygame.mixer.music.play()
-	while pygame.mixer.music.get_busy() == True:
-		pass
-	pygame.mixer.music.stop()
+	#while pygame.mixer.music.get_busy() == True:
+		#pass
+	#pygame.mixer.music.stop()
 	time.sleep(.1)
 
 	
