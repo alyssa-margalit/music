@@ -1,4 +1,9 @@
-from pygame import mixer
+import pygame
 
-sound = mixer.Sound('bass-drum.mp3')
-sound.play()
+pygame.mixer.init()
+pygame.mixer.music.load("bass.mp3")
+pygame.mixer.music.set_volume(1.0)
+pygame.mixer.music.play()
+
+while pygame.mixer.music.get_busy() == True:
+	pass
