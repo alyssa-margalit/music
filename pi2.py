@@ -30,7 +30,7 @@ class Hello2Program:
         while self._running:
             time.sleep(2) #Five second delay
             cycle = cycle + 0.5
-            print ("5 Second Thread cycle+1.0 - "+ str(cycle))
+            print ("2 Second Thread cycle+1.0 - "+ str(cycle))
 #Create Class
 FiveSecond = Hello5Program()
 #Create Thread
