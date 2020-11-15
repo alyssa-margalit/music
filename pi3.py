@@ -102,6 +102,6 @@ try:
 				busy = 1
 
 
-		time.sleep(.3)
+		time.sleep(.1)
 except KeyboardInterrupt:
 	print("interupt")
