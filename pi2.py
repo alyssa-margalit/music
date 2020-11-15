@@ -63,7 +63,7 @@ while Exit==False:
     cycle = cycle + 0.1 
     print ("Main Program increases cycle+0.1 - "+ str(cycle))
     time.sleep(1) #One second delay
-    if (cycle > 5): Exit = True #Exit Program
+    #if (cycle > 5): Exit = True #Exit Program
 
 TwoSecond.terminate()
 FiveSecond.terminate()
