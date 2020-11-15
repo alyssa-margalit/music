@@ -33,12 +33,14 @@ def musicOff():
     print("music playing")
     time.sleep(.5)
     print("music off")
-    pygame.mixer.music.stop()
     busy = 0
+    pygame.mixer.music.stop()
+    
 try:
 	while True:
 		distance = ultrasonicRead(ranger)
 		print(distance)
+		print(busy)
 		if busy ==0:
 			if 0<distance<10:
 				pygame.mixer.music.load("S1.mp3")
