@@ -30,10 +30,10 @@ ranger = 4
 busy = 0
 
 def musicOff():
-	global busy
     print("music playing")
     time.sleep(.5)
     print("music off")
+    global busy
     busy = 0
     print(busy)
     pygame.mixer.music.stop()
