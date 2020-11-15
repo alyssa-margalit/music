@@ -9,7 +9,10 @@ from pygame.locals import *
 import os
 
 ranger = 4
-
+pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load("S1.mp3")
+pygame.mixer.music.set_volume(15)
 global cycle
 cycle = 0.0
 
@@ -25,7 +28,7 @@ class Hello5Program:
         while self._running:
             distance = ultrasonicRead(ranger)
             print(distance)
-            time.sleep(.5) #One second delay
+            time.sleep(.5) #.5 second delay
             cycle = cycle + 1.0
             print ("5 Second Thread cycle+1.0 - "+ str(cycle))
 
@@ -39,8 +42,10 @@ class Hello2Program:
     def run(self):
         global cycle
         while self._running:
+            pygame.mixer.music.stop()
             print("play sound")
-            time.sleep(1) #Five second delay
+            pygame.mixer.music.play()
+            time.sleep(1) #1 second delay
             cycle = cycle + 0.5
             #print ("2 Second Thread cycle+1.0 - "+ str(cycle))
 #Create Class
