@@ -16,7 +16,7 @@ class Hello5Program:
         while self._running:
             time.sleep(5) #Five second delay
             cycle = cycle + 1.0
-            print ("5 Second Thread cycle+1.0 - "+ cycle)
+            print ("5 Second Thread cycle+1.0 - "+ str(cycle))
 
 class Hello2Program:  
     def __init__(self):
@@ -30,7 +30,7 @@ class Hello2Program:
         while self._running:
             time.sleep(2) #Five second delay
             cycle = cycle + 0.5
-            print ("5 Second Thread cycle+1.0 - "+ cycle)
+            print ("5 Second Thread cycle+1.0 - "+ str(cycle))
 #Create Class
 FiveSecond = Hello5Program()
 #Create Thread
@@ -49,7 +49,7 @@ TwoSecondThread.start()
 Exit = False #Exit flag
 while Exit==False:
     cycle = cycle + 0.1 
-    print ("Main Program increases cycle+0.1 - "+ cycle)
+    print ("Main Program increases cycle+0.1 - "+ str(cycle))
     time.sleep(1) #One second delay
     if (cycle > 5): Exit = True #Exit Program
 
