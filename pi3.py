@@ -50,7 +50,8 @@ try:
 		elif 200<slide<500:
 			pygame.mixer.music.set_volume(20)
 		else:
-			pygame.mixer.music.set_volume(15)
+			pygame.mixer.music.set_volume(100)
+			print("max")
 		distance = ultrasonicRead(ranger)
 		#print(distance)
 		#print(busy)
