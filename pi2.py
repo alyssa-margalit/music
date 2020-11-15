@@ -25,10 +25,10 @@ queue = "S1.mp3"
 pygame.mixer.music.set_volume(15)
 
 
-queue = "S1.mp3"
+
 
 def newBeat(distance):
-
+	print("new Beat called")
 	if 0<distance<3:
 		queue = "S1.mp3"
 		print("1")
