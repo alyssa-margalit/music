@@ -8,6 +8,7 @@ import pygame
 from pygame.locals import *
 import os
 
+ranger = 4
 #GPIO.setmode(GPIO.BCM)
 #PIR_PIN = 18
 #GPIO.setup(PIR_PIN, GPIO.IN)
