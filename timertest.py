@@ -29,9 +29,9 @@ pygame.mixer.music.set_volume(15)
 
 def hello():
     print ("hello, world")
-    distance1 = ultrasonicRead(ranger)
-    print(distance1)
-    newBeat(distance1)
+    
+    pygame.mixer.music.load(queue)
+    pygame.mixer.music.play()
     t = Timer(2,hello)
     t.start()
 
@@ -68,11 +68,13 @@ def newBeat(distance):
 		print("8")
 	else:
 		print("101")
+	pygame.mixer.music.load(queue)
 # timer will wake up ever 3 seconds, while we do something else
 while True:
     print ("do something else")
+    distance1 = ultrasonicRead(ranger)
+    print(distance1)
+    newBeat(distance1)
     
-    pygame.mixer.music.load(queue)
-    pygame.mixer.music.play()
 
     sleep(1)
