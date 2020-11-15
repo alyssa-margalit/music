@@ -34,6 +34,7 @@ def musicOff():
     time.sleep(.5)
     print("music off")
     busy = 0
+    print(busy)
     pygame.mixer.music.stop()
     
 try:
