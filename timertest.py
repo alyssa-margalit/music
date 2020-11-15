@@ -71,5 +71,6 @@ while True:
     distance1 = ultrasonicRead(ranger)
     print(distance1)
     newBeat(distance1)
+    pygame.mixer.music.play()
 
     sleep(2)
