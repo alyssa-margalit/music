@@ -1,5 +1,14 @@
 from threading import Thread
 import time
+import sys
+import grovepi
+from grovepi import *
+import math
+import pygame
+from pygame.locals import *
+import os
+
+ranger = 4
 
 global cycle
 cycle = 0.0
@@ -14,6 +23,8 @@ class Hello5Program:
     def run(self):
         global cycle
         while self._running:
+            distance = ultrasonicRead(ranger)
+            print(distance)
             time.sleep(5) #Five second delay
             cycle = cycle + 1.0
             print ("5 Second Thread cycle+1.0 - "+ str(cycle))
