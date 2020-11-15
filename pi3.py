@@ -26,10 +26,11 @@ ranger = 4
 #GPIO.setup(LED_PIN, GPIO.OUT)
 
 
-global busy
+#global busy
 busy = 0
 
 def musicOff():
+	global busy
     print("music playing")
     time.sleep(.5)
     print("music off")
