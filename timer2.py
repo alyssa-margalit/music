@@ -58,6 +58,7 @@ while True:
 		queue = "S8.mp3"
 		print("8")
 	else:
+		queue = "S2.mp3"
 		print("101")
 	pygame.mixer.music.load(queue)
 	sleep(1)
