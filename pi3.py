@@ -35,11 +35,19 @@ try:
 	while True:
 		distance = ultrasonicRead(ranger)
 		print(distance)
-		if 0<distance<20:
+		if 0<distance<10:
+			pygame.mixer.music.load("S1.mp3")
 			print("Motion Detected!")
 			t = Thread(target=musicOff) # Create thread
 			t.start() # Start thread
 			pygame.mixer.music.play()
+		elif 10<distance<20:
+			pygame.mixer.music.load("S2.mp3")
+			print("Motion Detected!")
+			t = Thread(target=musicOff) # Create thread
+			t.start() # Start thread
+			pygame.mixer.music.play()
+
 		time.sleep(4)
 except KeyboardInterrupt:
 	print("interupt")
