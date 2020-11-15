@@ -18,7 +18,7 @@ queue = "S1.mp3"
 pygame.mixer.music.set_volume(15)
 
 ranger = 4
-
+pot = 2
 #GPIO.setmode(GPIO.BCM)
 #PIR_PIN = 18
 #GPIO.setup(PIR_PIN, GPIO.IN)
@@ -40,6 +40,17 @@ def musicOff():
     
 try:
 	while True:
+		slide = analogRead(pot)
+		if 0<slide<50:
+			pygame.mixer.music.set_volume(5)
+		elif 50<slide<100:
+			pygame.mixer.music.set_volume(10)
+		elif 100<slide<200:
+			pygame.mixer.music.set_volume(15)
+		elif 200<slide<500:
+			pygame.mixer.music.set_volume(20)
+		else:
+			pygame.mixer.music.set_volume(15)
 		distance = ultrasonicRead(ranger)
 		#print(distance)
 		#print(busy)
