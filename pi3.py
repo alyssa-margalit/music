@@ -31,7 +31,7 @@ busy = 0
 
 def musicOff():
     #print("music playing")
-    time.sleep(.5)
+    time.sleep(.4)
     #print("music off")
     global busy
     busy = 0
