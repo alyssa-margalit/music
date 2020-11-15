@@ -10,6 +10,7 @@ from pygame.locals import *
 import os
 
 global queue
+queue = "S1.mp3"
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 pygame.init()
