@@ -24,30 +24,39 @@ ranger = 4
 #GPIO.setup(PIR_PIN, GPIO.IN)
 #LED_PIN = 17
 #GPIO.setup(LED_PIN, GPIO.OUT)
+
+
+#global busy
+#busy = 0
+
 def musicOff():
     #GPIO.output(LED_PIN, GPIO.input(PIR_PIN))
     print("music playing")
     time.sleep(.5)
     print("music off")
     pygame.mixer.music.stop()
+    #busy = 0
     #GPIO.output(LED_PIN, False)
 try:
 	while True:
 		distance = ultrasonicRead(ranger)
 		print(distance)
+		#if busy ==0:
 		if 0<distance<10:
 			pygame.mixer.music.load("S1.mp3")
 			print("Motion Detected!")
 			t = Thread(target=musicOff) # Create thread
 			t.start() # Start thread
 			pygame.mixer.music.play()
+			#busy = 1
 		elif 10<distance<20:
 			pygame.mixer.music.load("S2.mp3")
 			print("Motion Detected!")
 			t = Thread(target=musicOff) # Create thread
 			t.start() # Start thread
 			pygame.mixer.music.play()
+			#busy = 1
 
-		time.sleep(4)
+		time.sleep(1)
 except KeyboardInterrupt:
 	print("interupt")
