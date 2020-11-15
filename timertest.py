@@ -20,7 +20,7 @@ pygame.mixer.init()
 ranger = 4
 pot = 2
 delay = 1
-distance = ultrasonicRead(ranger)
+distance1 = ultrasonicRead(ranger)
 slide = analogRead(pot)
 pygame.mixer.init()
 pygame.mixer.music.load("S1.mp3")
@@ -29,10 +29,13 @@ pygame.mixer.music.set_volume(15)
 
 def hello():
     print ("hello, world")
-    t = Timer(4,hello)
+    distance1 = ultrasonicRead(ranger)
+    print(distance1)
+    newBeat(distance1)
+    t = Timer(2,hello)
     t.start()
 
-t = Timer(4, hello)
+t = Timer(2, hello)
 t.start() # after 3 seconds, "hello, world" will be printed
 
 def newBeat(distance):
@@ -68,9 +71,8 @@ def newBeat(distance):
 # timer will wake up ever 3 seconds, while we do something else
 while True:
     print ("do something else")
-    distance1 = ultrasonicRead(ranger)
-    print(distance1)
-    newBeat(distance1)
+    
+    pygame.mixer.music.load(queue)
     pygame.mixer.music.play()
 
-    sleep(2)
+    sleep(1)
