@@ -35,14 +35,14 @@ def musicOff():
     print("music off")
     global busy
     busy = 0
-    print(busy)
+    #print(busy)
     pygame.mixer.music.stop()
     
 try:
 	while True:
 		distance = ultrasonicRead(ranger)
-		print(distance)
-		print(busy)
+		#print(distance)
+		#print(busy)
 		if busy ==0:
 			if 0<distance<10:
 				pygame.mixer.music.load("S1.mp3")
@@ -59,6 +59,6 @@ try:
 				pygame.mixer.music.play()
 				busy = 1
 
-		time.sleep(1)
+		time.sleep(.3)
 except KeyboardInterrupt:
 	print("interupt")
