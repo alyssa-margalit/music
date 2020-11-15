@@ -28,9 +28,12 @@ class Hello5Program:
         while self._running:
             distance = ultrasonicRead(ranger)
             print(distance)
+            pygame.mixer.music.stop()
             time.sleep(.5) #.5 second delay
             cycle = cycle + 1.0
+            FiveSecond.terminate()
             print ("5 Second Thread cycle+1.0 - "+ str(cycle))
+
 
 class Hello2Program:  
     def __init__(self):
@@ -42,10 +45,12 @@ class Hello2Program:
     def run(self):
         global cycle
         while self._running:
-            pygame.mixer.music.stop()
+            #pygame.mixer.music.stop()
+            FiveSecondThread.start()
             print("play sound")
             pygame.mixer.music.play()
-            time.sleep(1) #1 second delay
+            time.sleep(.5) #1 second delay
+            #pygame.mixer.music.stop()
             cycle = cycle + 0.5
             #print ("2 Second Thread cycle+1.0 - "+ str(cycle))
 #Create Class
@@ -53,7 +58,7 @@ FiveSecond = Hello5Program()
 #Create Thread
 FiveSecondThread = Thread(target=FiveSecond.run) 
 #Start Thread 
-FiveSecondThread.start()
+#FiveSecondThread.start()
 
 #Create Class
 TwoSecond = Hello2Program()
