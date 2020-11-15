@@ -25,7 +25,7 @@ class Hello5Program:
         while self._running:
             distance = ultrasonicRead(ranger)
             print(distance)
-            time.sleep(5) #Five second delay
+            time.sleep(.5) #One second delay
             cycle = cycle + 1.0
             print ("5 Second Thread cycle+1.0 - "+ str(cycle))
 
@@ -39,9 +39,10 @@ class Hello2Program:
     def run(self):
         global cycle
         while self._running:
-            time.sleep(2) #Five second delay
+            print("play sound")
+            time.sleep(1) #Five second delay
             cycle = cycle + 0.5
-            print ("2 Second Thread cycle+1.0 - "+ str(cycle))
+            #print ("2 Second Thread cycle+1.0 - "+ str(cycle))
 #Create Class
 FiveSecond = Hello5Program()
 #Create Thread
