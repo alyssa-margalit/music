@@ -20,17 +20,21 @@ pygame.mixer.music.set_volume(15)
 
 
 def hello():
-    print ("hello, world")
+    #print ("hello, world")
     pygame.mixer.music.play()
-    t = Timer(2,hello)
+    	while True:
+			if pygame.mixer.music.get_busy():
+			#print("busy")
+				pass
+    t = Timer(.6,hello)
     t.start()
 
-t = Timer(2, hello)
+t = Timer(.6, hello)
 t.start() # after 3 seconds, "hello, world" will be printed
 
 # timer will wake up ever 3 seconds, while we do something else
 while True:
-	print ("do something else")
+	#print ("do something else")
 	distance = ultrasonicRead(ranger)
 	print(distance)
 	if 0<distance<3:
