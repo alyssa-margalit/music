@@ -30,10 +30,9 @@ t.start() # after 3 seconds, "hello, world" will be printed
 
 # timer will wake up ever 3 seconds, while we do something else
 while True:
-
-    print ("do something else")
+	print ("do something else")
 	distance = ultrasonicRead(ranger)
-    print(distance)
+	print(distance)
     if 0<distance<3:
 		queue = "S1.mp3"
 		print("1")
