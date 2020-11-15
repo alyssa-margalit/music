@@ -30,9 +30,9 @@ ranger = 4
 busy = 0
 
 def musicOff():
-    print("music playing")
+    #print("music playing")
     time.sleep(.5)
-    print("music off")
+    #print("music off")
     global busy
     busy = 0
     #print(busy)
@@ -44,20 +44,63 @@ try:
 		#print(distance)
 		#print(busy)
 		if busy ==0:
-			if 0<distance<10:
+			if 0<distance<4:
 				pygame.mixer.music.load("S1.mp3")
-				print("Motion Detected!")
+				#print("Motion Detected!")
 				t = Thread(target=musicOff) # Create thread
 				t.start() # Start thread
 				pygame.mixer.music.play()
 				busy = 1
-			elif 10<distance<20:
+			elif 4<distance<8:
 				pygame.mixer.music.load("S2.mp3")
-				print("Motion Detected!")
+				#print("Motion Detected!")
 				t = Thread(target=musicOff) # Create thread
 				t.start() # Start thread
 				pygame.mixer.music.play()
 				busy = 1
+			elif 8<distance<12:
+				pygame.mixer.music.load("S3.mp3")
+				#print("Motion Detected!")
+				t = Thread(target=musicOff) # Create thread
+				t.start() # Start thread
+				pygame.mixer.music.play()
+				busy = 1
+			elif 12<distance<16:
+				pygame.mixer.music.load("S4.mp3")
+				#print("Motion Detected!")
+				t = Thread(target=musicOff) # Create thread
+				t.start() # Start thread
+				pygame.mixer.music.play()
+				busy = 1
+			elif 16<distance<20:
+				pygame.mixer.music.load("S5.mp3")
+				#print("Motion Detected!")
+				t = Thread(target=musicOff) # Create thread
+				t.start() # Start thread
+				pygame.mixer.music.play()
+				busy = 1
+			elif 20<distance<24:
+				pygame.mixer.music.load("S6.mp3")
+				#print("Motion Detected!")
+				t = Thread(target=musicOff) # Create thread
+				t.start() # Start thread
+				pygame.mixer.music.play()
+				busy = 1
+			elif 24<distance<28:
+				pygame.mixer.music.load("S7.mp3")
+				#print("Motion Detected!")
+				t = Thread(target=musicOff) # Create thread
+				t.start() # Start thread
+				pygame.mixer.music.play()
+				busy = 1
+			elif 28<distance<30:
+				pygame.mixer.music.load("S8.mp3")
+				#print("Motion Detected!")
+				t = Thread(target=musicOff) # Create thread
+				t.start() # Start thread
+				pygame.mixer.music.play()
+				busy = 1
+
 
 		time.sleep(.3)
 except KeyboardInterrupt:
