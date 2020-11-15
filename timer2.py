@@ -22,10 +22,10 @@ pygame.mixer.music.set_volume(15)
 def hello():
     #print ("hello, world")
     pygame.mixer.music.play()
-    	while True:
-			if pygame.mixer.music.get_busy():
+    while True:
+		if pygame.mixer.music.get_busy():
 			#print("busy")
-				pass
+			pass
     t = Timer(.6,hello)
     t.start()
 
