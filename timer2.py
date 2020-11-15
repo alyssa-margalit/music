@@ -33,14 +33,12 @@ while True:
 	print ("do something else")
 	distance = ultrasonicRead(ranger)
 	print(distance)
-    if 0<distance<3:
+	if 0<distance<3:
 		queue = "S1.mp3"
 		print("1")
-
 	elif 3<distance<6:
 		queue = "S2.mp3"
 		print("2")
-
 	elif 6<distance<9:
 		queue = "S3.mp3"
 		print("3")
@@ -62,4 +60,4 @@ while True:
 	else:
 		print("101")
 	pygame.mixer.music.load(queue)
-    sleep(1)
+	sleep(1)
